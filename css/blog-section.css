@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    width: 100%;
+}
+
+.section-blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #e4e8eb;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    top: 5rem;
+    margin-bottom: 10rem;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #20211c;
+    animation: fadeIn 2s ease-in-out;
+    margin-top: 5rem;
+}
+
+.blog-post {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.765);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+.blog-post:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.765);
+    border: 2px solid #1100ff;
+    background: #1a4ad0;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-post h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.blog-post p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.blog-post a {
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.blog-post a:hover {
+    color: #ffffff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #blog h1 {
+        font-size: 2.5em;
+    }
+    .blog-post h2 {
+        font-size: 1.5em;
+    }
+    .blog-post p,
+    .blog-post a {
+        font-size: 1em;
+    }
+}

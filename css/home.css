@@ -1,0 +1,345 @@
+/* Base Styles & Variables */
+
+:root {
+    --primary-color: #0A0A0A;
+    --accent-color: #FF3366;
+    --text-color: #333333;
+    --light-gray: #F5F5F5;
+    --spacing-unit: clamp(1rem, 2vw, 2rem);
+}
+
+.section-home {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    color: var(--text-color);
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* Dynamic Grid Background */
+
+.design-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(244, 6, 6, 0), transparent 1px), linear-gradient(rgba(234, 12, 12, 0), transparent);
+    background-size: 40px 40px;
+    animation: gridFloat 20s linear infinite;
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(218, 219, 228, 0.234) 70%, rgb(169, 167, 167));
+}
+
+
+/* Logo Mark */
+
+
+/* Main Content */
+
+.content-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+}
+
+
+/* Creative Heading */
+
+.creative-heading {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    color: #fdfdfd;
+}
+
+.text-outline {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    font-weight: 900;
+}
+
+.text-fill {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.tagline {
+    display: block;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: rgb(0, 0, 0);
+    margin-top: var(--spacing-unit);
+    font-weight: 400;
+}
+
+
+/* Rotating Elements */
+
+.rotating-elements {
+    display: flex;
+    gap: var(--spacing-unit);
+    margin: calc(var(--spacing-unit) * 2) 0;
+    flex-wrap: wrap;
+}
+
+.element {
+    padding: 1rem 2rem;
+    border: 2px solid rgba(0, 0, 0, 0.266);
+    box-shadow: 0px 5px 8px 0px black;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.element:hover {
+    background: royalblue;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0px 1px 8px 0px black;
+}
+
+
+/* Portfolio Grid */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-unit);
+    margin: calc(var(--spacing-unit) * 2) 0;
+}
+
+.portfolio-item {
+    background: white;
+    padding: calc(var(--spacing-unit) * 2);
+    border-radius: 15px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.item-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--accent-color);
+    opacity: 0.2;
+}
+
+
+/* CTA Section */
+
+.cta-section {
+    text-align: center;
+    margin: calc(var(--spacing-unit) * 4) 0;
+}
+
+.cta-heading {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: var(--spacing-unit);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-unit);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Process Steps */
+
+.process-indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-unit);
+    margin: calc(var(--spacing-unit) * 4) 0;
+}
+
+.process-step {
+    display: flex;
+    gap: var(--spacing-unit);
+    align-items: flex-start;
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--accent-color);
+}
+
+
+/* Awards Section */
+
+.awards-section {
+    display: flex;
+    gap: var(--spacing-unit);
+    flex-wrap: wrap;
+    margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.award-badge {
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Scroll Indicator */
+
+.scroll-indicator {
+    position: fixed;
+    bottom: var(--spacing-unit);
+    right: var(--spacing-unit);
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 60px;
+    background: rgb(255, 0, 0);
+    transform-origin: top;
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+
+/* Animations */
+
+@keyframes gridFloat {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scrollLine {
+    0% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    .process-indicators {
+        grid-template-columns: 1fr;
+    }
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-mark {
+        position: absolute;
+    }
+    .rotating-elements {
+        justify-content: center;
+    }
+    .cta-buttons {
+        flex-direction: column;
+    }
+    .awards-section {
+        justify-content: center;
+    }
+}
+
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .design-grid,
+    .logo-circle,
+    .scroll-line {
+        animation: none;
+    }
+    .portfolio-item:hover,
+    .element:hover,
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: none;
+    }
+}
+
+
+/* Dark Mode Support */
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --primary-color: #FFFFFF;
+        --text-color: #FFFFFF;
+        --light-gray: #121212;
+    }
+    .portfolio-item,
+    .award-badge {
+        background: #1A1A1A;
+    }
+}

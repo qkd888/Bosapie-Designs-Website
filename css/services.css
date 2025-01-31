@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4e8eb;
+}
+
+:root {
+    --primary-color: #1a2b3c;
+    --secondary-color: #2c6ace;
+    --text-color: #2c3e50;
+    --background-color: #f8f9fa;
+    --white: #ffffff;
+    --grey-light: #f1f3f5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.section-services {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+
+/* Services Header */
+
+.services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title .title-prefix {
+    display: block;
+    color: rgb(0, 0, 0);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.section-title .title-main {
+    font-size: 2.75rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    color: var(--text-color);
+    font-size: 1.125rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+
+/* Services Grid */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.service-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 253, 253);
+    border-radius: 12px;
+    padding: 2rem 2rem;
+    text-align: center;
+    box-shadow: 0px 4px 8px 0px black;
+    transition: all 0.3s ease;
+    border: 1px solid var(--grey-light);
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.service-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(44, 62, 80, 0.15);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon svg {
+    width: 60px;
+    height: 60px;
+    stroke: var(--secondary-color);
+    stroke-width: 1.5;
+    fill: none;
+}
+
+.category-title {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.1rem;
+    font-weight: 700;
+}
+
+.service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.service-item {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.service-item p {
+    color: var(--text-color);
+    font-size: 0.90rem;
+    opacity: 0.9;
+    flex-grow: 1;
+}
+
+
+/* Call to Action */
+
+.services-cta {
+    background-color: rgb(0, 0, 0);
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 1rem;
+    border-radius: 12px;
+}
+
+.services-cta h3 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.services-cta p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    background: #000;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid white
+}
+
+.cta-button:hover {
+    background-color: rgb(255, 251, 251);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    color: rgb(0, 0, 0);
+}
+
+
+/* Responsive Breakpoints */
+
+@media screen and (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .process-timeline {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .section-title .title-main {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    .process-timeline {
+        grid-template-columns: 1fr;
+    }
+    .section-title .title-main {
+        font-size: 2rem;
+    }
+    .services-cta h3 {
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-services {
+        padding: 2rem 0.5rem;
+    }
+    .section-title .title-main {
+        font-size: 1.75rem;
+    }
+    .services-cta h3 {
+        font-size: 2rem;
+    }
+    .services-cta p {
+        font-size: 1rem;
+    }
+}
