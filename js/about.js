@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Stat Counter Animation
+    /***********************/
+    /***********************/
     const statNumbers = document.querySelectorAll('.stat-number');
 
     const animateCounter = (element, start = 0, end, duration = 2000) => {
@@ -34,6 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Team Member Hover Effects
+    /***********************/
+    /***********************/
     const teamMembers = document.querySelectorAll('.team-member');
 
     teamMembers.forEach(member => {
@@ -51,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Testimonial Carousel
+    /***********************/
+    /***********************/
     class TestimonialCarousel {
         constructor(containerSelector) {
             this.container = document.querySelector(containerSelector);
@@ -63,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         init() {
             // Only activate carousel if more than one testimonial
+            /***********************/
+            /***********************/
             if (this.testimonials.length > 1) {
                 this.showTestimonial(this.currentIndex);
                 this.startAutoSlide();
@@ -92,6 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Values Card Interaction
+    /***********************/
+    /***********************/
     const valueCards = document.querySelectorAll('.value-card');
 
     valueCards.forEach(card => {
@@ -107,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Parallax Effect for Section Background
+    /***********************/
+    /***********************/
     const parallaxSection = document.querySelector('.section-about');
 
     window.addEventListener('scroll', () => {
@@ -115,10 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // CTA Button Interaction
+    /***********************/
+    /***********************/
     const ctaButton = document.querySelector('.cta-button');
 
     ctaButton.addEventListener('click', () => {
         // Example interaction - could be replaced with actual contact form or modal
+        /***********************/
+        /***********************/
         ctaButton.textContent = 'Sending...';
         setTimeout(() => {
             ctaButton.textContent = 'Message Sent!';
@@ -127,15 +143,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Observers
+    /***********************/
+    /***********************/
     if (statNumbers.length) {
         statsObserver.observe(statNumbers[0]);
     }
 
     // Create Testimonial Carousel
+    /***********************/
+    /***********************/
     const testimonialCarousel = new TestimonialCarousel('.testimonial-grid');
 });
 
 // Add mouse move effect
+/***********************/
+/***********************/
 document.addEventListener('mousemove', (e) => {
     const mouseX = e.clientX / window.innerWidth;
     const mouseY = e.clientY / window.innerHeight;

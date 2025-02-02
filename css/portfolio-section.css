@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
+    width: 100%;
 }
 
 :root {
@@ -18,7 +19,7 @@ body {
 }
 
 .section-portfolio {
-    max-width: 1400px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 4rem 1rem;
     background-color: var(--background-color);
@@ -29,7 +30,6 @@ body {
 
 .portfolio-header {
     text-align: center;
-    margin-bottom: 3rem;
 }
 
 .portfolio-header .section-title {
@@ -37,6 +37,7 @@ body {
     color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 800;
+    margin-top: 2rem;
 }
 
 .portfolio-header .section-subtitle {
@@ -73,7 +74,7 @@ body {
 
 .filter-button.active,
 .filter-button:hover {
-    background-color: var(--primary-color);
+    background-color: black;
     color: var(--white);
 }
 
@@ -90,14 +91,14 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px 0px black;
     transition: all 0.3s ease;
     background-color: var(--white);
 }
 
 .portfolio-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 8px 0px black;
 }
 
 .portfolio-image {
@@ -116,6 +117,7 @@ body {
 
 .portfolio-item:hover .portfolio-image img {
     transform: scale(1.1);
+    box-shadow: 0px 4px 8px 0px black;
 }
 
 .portfolio-overlay {
@@ -136,11 +138,15 @@ body {
     padding: 2rem;
     transform: translateY(50%);
     transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px 0px black;
 }
 
 .portfolio-item:hover .portfolio-overlay {
     opacity: 1;
     transform: translateY(0);
+    background: #0000009d;
+    color: whiste;
+    box-shadow: 0px 4px 8px 0px black;
 }
 
 .portfolio-overlay h4 {
@@ -157,7 +163,7 @@ body {
 
 .view-project-btn {
     background-color: var(--white);
-    color: var(--primary-color);
+    color: black;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 50px;
@@ -166,8 +172,8 @@ body {
 }
 
 .view-project-btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--white);
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transform: translateY(-3px);
 }
 
@@ -176,7 +182,7 @@ body {
 
 .portfolio-cta {
     margin-top: 4rem;
-    background-color: var(--secondary-color);
+    background-color: black;
     color: var(--white);
     text-align: center;
     padding: 4rem 1rem;
@@ -197,8 +203,8 @@ body {
 
 .portfolio-cta .cta-button {
     display: inline-block;
-    background-color: var(--white);
-    color: var(--secondary-color);
+    background-color: none;
+    color: rgb(255, 254, 254);
     padding: 1rem 2.5rem;
     text-decoration: none;
     border-radius: 50px;
@@ -209,6 +215,7 @@ body {
 .portfolio-cta .cta-button:hover {
     background-color: var(--grey-light);
     transform: translateY(-5px);
+    color: black;
 }
 
 

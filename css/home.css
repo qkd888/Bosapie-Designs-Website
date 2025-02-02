@@ -1,10 +1,10 @@
 /* Base Styles & Variables */
 
 :root {
-    --primary-color: #0A0A0A;
-    --accent-color: #FF3366;
+    --primary-color: #0a0a0a;
+    --accent-color: #ff3366;
     --text-color: #333333;
-    --light-gray: #F5F5F5;
+    --light-gray: #f5f5f5;
     --spacing-unit: clamp(1rem, 2vw, 2rem);
 }
 
@@ -37,16 +37,11 @@
     background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(218, 219, 228, 0.234) 70%, rgb(169, 167, 167));
 }
 
-
-/* Logo Mark */
-
-
-/* Main Content */
-
 .content-wrapper {
     max-width: 1440px;
     margin: 0 auto;
     padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+    margin-top: 3rem;
 }
 
 
@@ -99,8 +94,8 @@
 }
 
 .element:hover {
-    background: royalblue;
-    color: white;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transform: translateY(-5px);
     box-shadow: 0px 1px 8px 0px black;
 }
@@ -334,12 +329,12 @@
 
 @media (prefers-color-scheme: dark) {
      :root {
-        --primary-color: #FFFFFF;
-        --text-color: #FFFFFF;
+        --primary-color: #ffffff;
+        --text-color: #ffffff;
         --light-gray: #121212;
     }
     .portfolio-item,
     .award-badge {
-        background: #1A1A1A;
+        background: #1a1a1a;
     }
 }

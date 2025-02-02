@@ -1,4 +1,6 @@
 // Main initialization
+/**********************************/
+/**********************************/
 document.addEventListener('DOMContentLoaded', () => {
     initGridBackground();
     initRotatingElements();
@@ -6,21 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Dynamic Grid Background
+/**********************************/
+/**********************************/
 function initGridBackground() {
     const grid = document.querySelector('.design-grid');
     const overlay = document.querySelector('.grid-overlay');
 
     // Create dynamic grid cells
+    /**********************************/
+    /**********************************/
     for (let i = 0; i < 100; i++) {
         const cell = document.createElement('div');
         cell.classList.add('grid-cell');
         grid.appendChild(cell);
     }
-
-
 }
 
 // Rotating Elements Animation
+/**********************************/
+/**********************************/
 function initRotatingElements() {
     const rotatingElements = {
         elements: document.querySelectorAll('.rotating-elements .element'),
@@ -30,6 +36,8 @@ function initRotatingElements() {
 
         init() {
             // Set initial styles
+            /**********************************/
+            /**********************************/
             this.elements.forEach((element, index) => {
                 element.style.opacity = '0';
                 element.style.transform = 'translatex(1000px)';
@@ -41,21 +49,31 @@ function initRotatingElements() {
             });
 
             // Start rotation
+            /**********************************/
+            /**********************************/
             this.startRotation();
 
             // Add hover pause functionality
+            /**********************************/
+            /**********************************/
             this.addHoverListeners();
         },
 
         rotate() {
             // Hide current element
+            /**********************************/
+            /**********************************/
             this.elements[this.currentIndex].style.opacity = '0';
             this.elements[this.currentIndex].style.transform = 'translateY(100px)';
 
             // Update index
+            /**********************************/
+            /**********************************/
             this.currentIndex = (this.currentIndex + 1) % this.elements.length;
 
             // Show next element
+            /**********************************/
+            /**********************************/
             this.elements[this.currentIndex].style.opacity = '1';
             this.elements[this.currentIndex].style.transform = 'translateY(0)';
         },
@@ -79,16 +97,22 @@ function initRotatingElements() {
 }
 
 // Scroll Indicator
+/**********************************/
+/**********************************/
 function initScrollIndicator() {
     const scrollIndicator = document.querySelector('.scroll-indicator');
     let lastScroll = 0;
     let isVisible = true;
 
     // Handle scroll events
+    /**********************************/
+    /**********************************/
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
 
         // Show/hide scroll indicator based on scroll direction
+        /**********************************/
+        /**********************************/
         if (currentScroll > lastScroll && isVisible) {
             scrollIndicator.style.opacity = '0';
             isVisible = false;
@@ -98,6 +122,8 @@ function initScrollIndicator() {
         }
 
         // Hide when scrolled past hero section
+        /**********************************/
+        /**********************************/
         if (currentScroll > window.innerHeight) {
             scrollIndicator.style.opacity = '0';
             isVisible = false;
@@ -107,6 +133,8 @@ function initScrollIndicator() {
     });
 
     // Add scroll animation for smooth scrolling
+    /**********************************/
+    /**********************************/
     scrollIndicator.addEventListener('click', () => {
         window.scrollTo({
             top: window.innerHeight,
@@ -116,6 +144,8 @@ function initScrollIndicator() {
 }
 
 // Handle window resize
+/**********************************/
+/**********************************/
 window.addEventListener('resize', () => {
     const grid = document.querySelector('.design-grid');
     grid.style.height = `${window.innerHeight}px`;
